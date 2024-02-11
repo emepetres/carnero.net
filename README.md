@@ -9,7 +9,9 @@ Add a new file in the `posts` directory with the following format:
 ```markdown
 # tile
 
-## TL;DR
+Text here is ignored. Use for properties, notes, etc.
+
+## TL;DR (rirst h2 is considered the summary)
 
 summary
 

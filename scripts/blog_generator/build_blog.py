@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import yaml
 import click
 from feed import Feed
@@ -6,7 +7,7 @@ from parse_post import parse_post
 from post import create_html_post
 from landing import create_html_landing
 import shutil
-
+import dateutil.parser
 
 @click.command()
 @click.argument("data_path", type=click.Path(exists=True))
@@ -46,6 +47,7 @@ def build_blog(data_path, landing_template, entry_template, blog_path, atomfile)
     posts_summaries = []
     for post_metadata in metadata["posts"]:
         post_file = post_metadata["file"]
+        post_date = dateutil.parser.isoparse(post_metadata["pub_date"]).date().strftime('%Y-%m-%d')
         title, summary_title, summary_content, sections = parse_post(posts_path / Path(post_file))
 
         # add post to feed
@@ -55,16 +57,19 @@ def build_blog(data_path, landing_template, entry_template, blog_path, atomfile)
         output_path = blog_path / Path(post_file.replace(".md", ".html"))
         create_html_post(
             posts_path / Path(entry_template),
+            metadata,
             title,
             summary_title,
             summary_content,
             sections,
+            post_date,
             output_path),
 
         posts_summaries.append(
             {"title": title,
              "summary_content": summary_content,
-             "uri": output_path}
+             "pub_date": post_date,
+             "uri": f"/{output_path.relative_to(Path(os.getcwd()))}"}
         )
 
     create_html_landing(

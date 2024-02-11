@@ -139,6 +139,29 @@ header#masthead a {
     color: #000
 }
 
+header#masthead aside {
+    font-size: 0.5em;
+    font-style: italic;
+    text-align: right;
+    color: #20b;
+}
+
+header#masthead aside a {
+    color: #20b;
+}
+
+h1 aside {
+    font-size: 0.4em;
+    font-style: italic;
+    color: #666
+}
+
+section aside {
+    font-size: 1em;
+    font-style: italic;
+    color: #666
+}
+
 cite {
     color: #666
 }
@@ -191,5 +214,9 @@ cite {
     h3 a,
     header#masthead a {
         color: #080
+    }
+
+    header#masthead aside a {
+        color: #88f
     }
 }

@@ -9,18 +9,17 @@
     <link rel="canonical" href="http://carnero.net" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="alternate" type="application/rss+xml" href="feed.rss" />
-    <title>Javier Carnero's Blog</title>
+    <title>{% master-title %}</title>
   </head>
   <body id="home">
     <header id="masthead">
-      <a href="/" title="Javier Carnero's Blog">Javier Carnero Iglesias's Blog</a>
+      <a href="/" title="Javier Carnero">Javier Carnero</a>
+      <aside>
+        <a href="/blog" title="{% master-title %}">{% master-title %}</a>
+      </aside>
     </header>
     <main>
-
-      TODO tags per item (categories)
-
       {% list %}
-
       <footer>
         <p xmlns:cc="http://creativecommons.org/ns#">
           This work by

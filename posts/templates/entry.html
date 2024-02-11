@@ -9,20 +9,22 @@
     <link rel="canonical" href="http://carnero.net" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="alternate" type="application/rss+xml" href="feed.rss" />
-    <title>Javier Carnero's Blog: {% title %}</title>
+    <title>{% master-title %}: {% title %}</title>
   </head>
   <body id="home">
     <header id="masthead">
-      <a href="/" title="Javier Carnero's Blog">Javier Carnero's Blog</a>
+      <a href="/" title="Javier Carnero">Javier Carnero</a>
+      <aside>
+        <a href="/blog" title="{% master-title %}">{% master-title %}</a>
+      </aside>
     </header>
     <main>
-      TODO Author, fecha
+      <h1>
+        {% title %}
+        <aside>{% pubdate %}</aside>
+      </h1>
 
-      {% title %}
-
-      {% summary %}
-
-      {% sections %}
+      {% summary %} {% sections %}
 
       <footer>
         <p xmlns:cc="http://creativecommons.org/ns#">

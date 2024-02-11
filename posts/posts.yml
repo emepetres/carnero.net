@@ -1,0 +1,14 @@
+id: http://carnero.net/blog
+title: Javier Carnero's Blog
+author:
+  name: Javier Carnero
+  email: javier@canero.net
+link: http://carnero.net/blog
+logo: null
+language: en
+description: Javier Carnero's writings on software development, data science, and
+  random stuff.
+posts:
+- file: this_website.md
+  lang: en
+  pub_date: '2024-02-11T10:19:31.321218+00:00'

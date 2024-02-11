@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>http://carnero.net/blog</id>
+  <title>Javier Carnero's Blog</title>
+  <updated>2024-02-11T11:48:41.229484+00:00</updated>
+  <author>
+    <name>Javier Carnero</name>
+    <email>javier@canero.net</email>
+  </author>
+  <link href="http://carnero.net/blog" rel="self"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <subtitle>Javier Carnero's writings on software development, data science, and random stuff.</subtitle>
+  <entry xml:lang="en">
+    <id>http://carnero.net/blog/this_website.html</id>
+    <title>How &amp; Why I Built This Website</title>
+    <updated>2024-02-11T10:19:31.321218+00:00</updated>
+    <author>
+      <name>Javier Carnero</name>
+      <email>javier@canero.net</email>
+    </author>
+    <link href="http://carnero.net/blog/this_website.html"/>
+    <published>2024-02-11T10:19:31.321218+00:00</published>
+  </entry>
+</feed>

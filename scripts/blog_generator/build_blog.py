@@ -4,6 +4,7 @@ import click
 from feed import Feed
 from parse_post import parse_post
 from post import create_html_post
+from landing import create_html_landing
 import shutil
 
 
@@ -36,23 +37,13 @@ def build_blog(data_path, landing_template, entry_template, blog_path, atomfile)
 
     feed = Feed(metadata, atomfile)
 
-    # blog_title = data["title"]
-    # blog_author = data["author"]["name"]
-    # blog_email = data["author"]["email"]
-    # blog_logo = data["logo"]
-    # blog_link = data["link"]
-    # blog_description = data["description"]
-
     # clean blog path
     blog_path = Path(blog_path).absolute()
     if blog_path.exists():
         shutil.rmtree(blog_path, ignore_errors=True)
     blog_path.mkdir()
 
-    # read landing template
-    with open(posts_path / Path(landing_template)) as f:
-        landing_template = f.read()
-
+    posts_summaries = []
     for post_metadata in metadata["posts"]:
         post_file = post_metadata["file"]
         title, summary_title, summary_content, sections = parse_post(posts_path / Path(post_file))
@@ -61,14 +52,27 @@ def build_blog(data_path, landing_template, entry_template, blog_path, atomfile)
         feed.add_entry(post_metadata, title)
 
         # create html post
+        output_path = blog_path / Path(post_file.replace(".md", ".html"))
         create_html_post(
             posts_path / Path(entry_template),
             title,
             summary_title,
             summary_content,
             sections,
-            blog_path / Path(post_file.replace(".md", ".html")),
+            output_path),
+
+        posts_summaries.append(
+            {"title": title,
+             "summary_content": summary_content,
+             "uri": output_path}
         )
+
+    create_html_landing(
+        posts_path / Path(landing_template),
+        metadata,
+        posts_summaries,
+        blog_path / Path("index.html")
+    )
 
     feed.write_feed_to_disk()
 

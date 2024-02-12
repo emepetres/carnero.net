@@ -47,11 +47,11 @@ def build_blog(data_path, landing_template, entry_template, blog_path, atomfile)
     posts_summaries = []
     for post_metadata in metadata["posts"]:
         post_file = post_metadata["file"]
-        post_date = dateutil.parser.isoparse(post_metadata["pub_date"]).date().strftime('%Y-%m-%d')
         title, summary_title, summary_content, sections = parse_post(posts_path / Path(post_file))
 
         # add post to feed
         feed.add_entry(post_metadata, title)
+        post_date = dateutil.parser.isoparse(post_metadata["pub_date"]).date().strftime('%Y-%m-%d')
 
         # create html post
         output_path = blog_path / Path(post_file.replace(".md", ".html"))

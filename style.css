@@ -150,6 +150,18 @@ header#masthead aside a {
     color: #20b;
 }
 
+body#home main h2 small {
+    margin-left: 2em
+}
+
+body#home main ul {
+    padding-left: 0
+}
+
+body#home main ul li {
+    list-style-type: none
+}
+
 h1 aside {
     font-size: 0.4em;
     font-style: italic;

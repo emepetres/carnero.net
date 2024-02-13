@@ -2,13 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="A few things about me" />
+    <meta name="description" content="{% master-title %}" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@carnero" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="http://carnero.net" />
+    <link rel="canonical" href="https://carnero.net/blog" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="alternate" type="application/rss+xml" href="feed.rss" />
+    <link
+      href="https://carnero.net/atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Carnero's Blog"
+    />
     <title>{% master-title %}</title>
   </head>
   <body id="home">
@@ -16,6 +21,14 @@
       <a href="/" title="Javier Carnero">Javier Carnero</a>
       <aside>
         <a href="/blog" title="{% master-title %}">{% master-title %}</a>
+        <a href="/atom.xml" target="_blank">
+          <img
+            id="feed-icon"
+            src="/img/feed.svg"
+            alt="Atom feed"
+            title="Atom feed"
+          />
+        </a>
       </aside>
     </header>
     <main>

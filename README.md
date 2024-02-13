@@ -49,7 +49,7 @@ Just commit to master & push. The site will be automatically built and deployed.
 ## TODO
 
 - [x] Add Github, Linkedin & Twitter links
-- [ ] Add feed to landing
+- [x] Add feed to landing
 - [ ] Write interests
 - [ ] Write things I believe in
 - [ ] Write first post

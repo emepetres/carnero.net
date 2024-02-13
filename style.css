@@ -182,6 +182,14 @@ div#social {
     float: right;
 }
 
+div#social a img {
+    padding-bottom: 0.05em;
+}
+
+img#feed-icon {
+    display: inline;
+}
+
 @media screen and (max-width: 440px) {
     header#masthead {
         font-size: 2em

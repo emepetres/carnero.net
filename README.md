@@ -48,12 +48,13 @@ Just commit to master & push. The site will be automatically built and deployed.
 
 ## TODO
 
-- [ ] Add Github, Linkein & Twitter links
+- [x] Add Github, Linkedin & Twitter links
+- [ ] Add feed to landing
 - [ ] Write interests
 - [ ] Write things I believe in
-- [ ] Add feed to landing
 - [ ] Write first post
 - [ ] Add favicon
 - [ ] Publish design principles
+- [ ] Add profile to discord
 - [ ] Add categories to feed, landing & posts
 - [ ] Pagination

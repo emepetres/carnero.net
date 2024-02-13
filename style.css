@@ -178,6 +178,10 @@ cite {
     color: #666
 }
 
+div#social {
+    float: right;
+}
+
 @media screen and (max-width: 440px) {
     header#masthead {
         font-size: 2em

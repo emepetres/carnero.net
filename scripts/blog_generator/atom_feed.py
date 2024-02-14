@@ -1,8 +1,10 @@
 from datetime import datetime, UTC
 from feedgen.feed import FeedGenerator
 from multilang import MultilangExtension, MultilangEntryExtension
+from feedgen_patch import atom_entry_patched
 
-class Feed:
+
+class AtomFeed:
     def __init__(self, metadata, atomfile):
         self.metadata = metadata
         self.atomfile = atomfile
@@ -19,6 +21,7 @@ class Feed:
         )
         feed.logo(self.metadata["logo"])
         feed.link(href=self.metadata["link"], rel="self")
+        feed.link(href=self.metadata["feed"], rel="alternate")
         feed.language(self.metadata["language"])
         feed.description(self.metadata["description"])
 
@@ -34,6 +37,8 @@ class Feed:
             title (str): post title
             summary (str): post summary
         """
+        # # FeedEntry.atom_entry = atom_entry_patched
+
         # set post entry pub date if it doesn't exist
         if "pub_date" not in metadata:
             metadata["pub_date"] = datetime.now(UTC).isoformat()
@@ -44,13 +49,19 @@ class Feed:
         post_url = f"{self.metadata['link']}/{post_file.replace('.md', '.html')}"
 
         entry = self.feed.add_entry(order="append")
+
+        import types
+        funcType = types.MethodType
+        entry.atom_entry = funcType(atom_entry_patched, entry)
+
         entry.id(post_url)
         entry.title(title)
         entry.summary(summary)
+        entry.enclosure(metadata["img"], 0, f"image/{metadata['img'].split('.')[-1]}")
         entry.multilang.language(post_lang)
         entry.published(post_pub_date)
         entry.updated(post_pub_date)
-        entry.link({"href": post_url, "title": title, "hreflang": post_lang})
+        entry.link({"href": post_url, "rel":"alternate", "title": title, "hreflang": post_lang})
         entry.author(
             {"name": self.metadata["author"]["name"], "email": self.metadata["author"]["email"]}
         )

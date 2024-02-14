@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 import yaml
 import click
-from feed import Feed
+from atom_feed import AtomFeed
 from parse_post import parse_post
 from post import create_html_post
 from landing import create_html_landing
@@ -36,7 +36,7 @@ def build_blog(data_path, landing_template, entry_template, blog_path, atomfile)
     posts_path = Path(data_path).parent.absolute()
     metadata = yaml.safe_load(open(data_path))
 
-    feed = Feed(metadata, atomfile)
+    feed = AtomFeed(metadata, atomfile)
 
     # clean blog path
     blog_path = Path(blog_path).absolute()

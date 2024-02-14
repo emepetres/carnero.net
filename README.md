@@ -50,8 +50,9 @@ Just commit to master & push. The site will be automatically built and deployed.
 
 - [x] Add Github, Linkedin & Twitter links
 - [x] Add feed to landing
-- [x] Add content / summary information to feed
-- [ ] Add images to feed
+- [x] Add content / summary information to entry feed
+- [x] Add images to entry feed
+- [ ] Add logo to feed
 - [ ] Write interests
 - [ ] Write things I believe in
 - [ ] Write first post

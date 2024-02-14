@@ -4,6 +4,7 @@ author:
   name: Javier Carnero
   email: javier@canero.net
 link: https://carnero.net/blog
+feed: https://carnero.net/atom.xml
 logo: null
 language: en
 description: Javier Carnero's writings on software development, data science, and
@@ -12,3 +13,4 @@ posts:
 - file: placeholder.md
   lang: en
   pub_date: '2024-02-12T23:25:33.827077+00:00'
+  img: https://cdn3.iconfinder.com/data/icons/design-n-code/100/272127c4-8d19-4bd3-bd22-2b75ce94ccb4-512.png

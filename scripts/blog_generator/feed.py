@@ -24,14 +24,15 @@ class Feed:
 
         return feed
 
-    def add_entry(self, metadata, title):
+    def add_entry(self, metadata: dict, title: str, summary: str):
         """Adds a new entry to the feed.
 
         If there is no pub_date in the metadata, it will be set to the current date and time
 
         Args:
-            metadata (_type_): post metadata from yaml file
-            title (_type_): post title
+            metadata (dict): post metadata from yaml file
+            title (str): post title
+            summary (str): post summary
         """
         # set post entry pub date if it doesn't exist
         if "pub_date" not in metadata:
@@ -45,6 +46,7 @@ class Feed:
         entry = self.feed.add_entry(order="append")
         entry.id(post_url)
         entry.title(title)
+        entry.summary(summary)
         entry.multilang.language(post_lang)
         entry.published(post_pub_date)
         entry.updated(post_pub_date)

@@ -50,7 +50,7 @@ def build_blog(data_path, landing_template, entry_template, blog_path, atomfile)
         title, summary_title, summary_content, sections = parse_post(posts_path / Path(post_file))
 
         # add post to feed
-        feed.add_entry(post_metadata, title)
+        feed.add_entry(post_metadata, title, summary_content)
         post_date = dateutil.parser.isoparse(post_metadata["pub_date"]).date().strftime('%Y-%m-%d')
 
         # create html post

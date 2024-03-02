@@ -63,7 +63,7 @@ class AtomFeed:
         entry.updated(content.properties["pub_date"])
         entry.link(
             {
-                "href": content.uri,
+                "href": "/" + content.uri,
                 "rel": "alternate",
                 "title": content.title,
                 "hreflang": content.lang,

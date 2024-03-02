@@ -1,6 +1,7 @@
 ---
 lang: en
 img: https://images.unsplash.com/photo-1516414447565-b14be0adf13e
+pub_date: '2024-03-02T00:08:46.338527+00:00'
 ---
 # Unveiling the Next Chapter: Adventures in Public Learning
 

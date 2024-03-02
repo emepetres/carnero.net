@@ -26,6 +26,10 @@ jobs:
           python-version: "3.12"
       - run: pip install -r site_generator/requirements.txt
       - run: scripts/bundle.sh
+      - name: Auto Minify
+        uses: nizarmah/auto-minify@v2.1
+        with:
+          directory: "_site"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
       - uses: stefanzweifel/git-auto-commit-action@v5

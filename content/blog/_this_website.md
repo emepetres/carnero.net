@@ -1,3 +1,7 @@
+---
+lang: en
+img: https://cdn3.iconfinder.com/data/icons/design-n-code/100/272127c4-8d19-4bd3-bd22-2b75ce94ccb4-512.png
+---
 # How & Why I Built This Website
 
 Text here is ignored. Use for properties, internal notes, etc.

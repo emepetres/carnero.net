@@ -1,0 +1,12 @@
+id: https://carnero.net/blog
+title: Carnero's Blog
+description: Javier Carnero's writings on software development, data science, and random stuff.
+author:
+  name: Javier Carnero
+  email: javier@canero.net
+logo: null
+language: en
+feed_file: atom.xml
+templates:
+  default: templates/blog/post.html
+  index: templates/blog/index.html

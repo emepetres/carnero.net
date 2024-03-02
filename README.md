@@ -52,12 +52,15 @@ Just commit to master & push. The site will be automatically built and deployed.
 - [x] Add feed to landing
 - [x] Add content / summary information to entry feed
 - [x] Add images to entry feed
-- [ ] Add logo to feed
-- [ ] Write interests
+- [x] Write interests
+- [x] Set all content as markdown
+- [x] Add tests to prevent breaking things in the future
+- [x] Add commit to CD if changes after bundle
+- [x] Write first post
 - [ ] Write things I believe in
-- [ ] Write first post
 - [ ] Add favicon
 - [ ] Publish design principles
 - [ ] Add profile to discord
 - [ ] Add categories to feed, landing & posts
+- [ ] Add logo to feed
 - [ ] Pagination

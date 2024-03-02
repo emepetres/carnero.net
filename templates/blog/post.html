@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="{% title %}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@carnero" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://carnero.net/atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Carnero's Blog"
+    />
+    <title>{% master-title %}: {% title %}</title>
+  </head>
+  <body id="home">
+    <header id="masthead">
+      <a href="/" title="{% website-title %}">{% website-title %}</a>
+      <aside>
+        <a href="/blog" title="{% master-title %}">{% master-title %}</a>
+        <a href="/blog/atom.xml" target="_blank" id="feed-icon">
+          <img src="/img/feed.svg" alt="Atom feed" title="Atom feed" />
+        </a>
+      </aside>
+    </header>
+    <main>
+      <h1>
+        {% title %}
+        <aside>{% pubdate %}</aside>
+      </h1>
+
+      <!-- <section>
+        <h2>{% summary_title %}</h2>
+        <p>{% summary_content %}</p>
+      </section> -->
+      {% sections %}
+
+      <footer>
+        <p xmlns:cc="http://creativecommons.org/ns#">
+          This work by
+          <a
+            rel="cc:attributionURL dct:creator"
+            property="cc:attributionName"
+            href="http://carnero.net"
+            >Javier Carnero</a
+          >
+          is licensed under
+          <a
+            href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
+            target="_blank"
+            rel="license noopener noreferrer"
+            style="display: inline-block"
+            >CC BY 4.0<img
+              style="
+                height: 22px !important;
+                margin-left: 3px;
+                vertical-align: text-bottom;
+                display: inline;
+              "
+              src="/img/cc.svg" /><img
+              style="
+                height: 22px !important;
+                margin-left: 3px;
+                vertical-align: text-bottom;
+                display: inline;
+              "
+              src="/img/by.svg"
+          /></a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

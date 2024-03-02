@@ -2,42 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="{% title %}" />
+    <meta name="description" content="{% master-title %}" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@carnero" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://carnero.net/blog" />
     <link rel="stylesheet" href="/style.css" />
     <link
-      href="https://carnero.net/atom.xml"
+      href="https://carnero.net/blog/atom.xml"
       type="application/atom+xml"
       rel="alternate"
       title="Carnero's Blog"
     />
-    <title>{% master-title %}: {% title %}</title>
+    <title>{% master-title %}</title>
   </head>
   <body id="home">
     <header id="masthead">
-      <a href="/" title="Javier Carnero">Javier Carnero</a>
+      <a href="/" title="{% website-title %}">{% website-title %}</a>
       <aside>
         <a href="/blog" title="{% master-title %}">{% master-title %}</a>
-        <a href="/atom.xml" target="_blank">
-          <img
-            id="feed-icon"
-            src="/img/feed.svg"
-            alt="Atom feed"
-            title="Atom feed"
-          />
+        <a href="/blog/atom.xml" target="_blank" id="feed-icon">
+          <img src="/img/feed.svg" alt="Atom feed" title="Atom feed" />
         </a>
       </aside>
     </header>
     <main>
-      <h1>
-        {% title %}
-        <aside>{% pubdate %}</aside>
-      </h1>
-
-      {% summary %} {% sections %}
-
+      {% list %}
       <footer>
         <p xmlns:cc="http://creativecommons.org/ns#">
           This work by

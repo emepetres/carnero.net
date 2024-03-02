@@ -9,6 +9,7 @@ on:
 permissions:
   id-token: write
   pages: write
+  contents: write
 
 jobs:
   # Build job
@@ -23,11 +24,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r scripts/blog_generator/requirements.txt
-      - run: scripts/build.sh
+      - run: pip install -r site_generator/requirements.txt
       - run: scripts/bundle.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Apply publication changes
+          file_pattern: "content/**/*.md"
 
   # Deployment job
   deploy:

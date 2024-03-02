@@ -1,5 +1,10 @@
 {
   "yaml.schemas": {
     "https://json.schemastore.org/github-workflow.json": "file:///home/jcarnero/source/carnero.net/.github/workflows/deploy.yml"
-  }
+  },
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.testing.pytestArgs": ["site_generator"],
+  "liveServer.settings.root": "/_site"
 }

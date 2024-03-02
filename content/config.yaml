@@ -1,0 +1,6 @@
+title: "\U0001F40F Javier Carnero"
+domain: carnero.net
+protocol: https
+templates:
+  default: templates/page.html
+  index: templates/index.html

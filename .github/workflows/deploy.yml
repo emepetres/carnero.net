@@ -31,7 +31,6 @@ jobs:
         id: html-minifier
         with:
           rootDir: "_site"
-          verbose: true
           flags: "collapseWhitespace, removeComments, removeOptionalTags, removeRedundantAttributes, removeScriptTypeAttributes, removeTagWhitespace, useShortDoctype, removeAttributeQuotes"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

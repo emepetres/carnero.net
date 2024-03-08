@@ -26,11 +26,13 @@ jobs:
           python-version: "3.12"
       - run: pip install -r site_generator/requirements.txt
       - run: scripts/bundle.sh
-      - name: Auto Minify
-        uses: nizarmah/auto-minify@v2.1
+      - name: HTMLMinifier
+        uses: emepetres/html-minifier-action
+        id: html-minifier
         with:
-          directory: "_site"
-          overwrite: true
+          rootDir: "_site"
+          verbose: true
+          flags: "collapseWhitespace, removeComments, removeOptionalTags, removeRedundantAttributes, removeScriptTypeAttributes, removeTagWhitespace, useShortDoctype, removeAttributeQuotes"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
       - uses: stefanzweifel/git-auto-commit-action@v5

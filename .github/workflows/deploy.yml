@@ -27,7 +27,7 @@ jobs:
       - run: pip install -r site_generator/requirements.txt
       - run: scripts/bundle.sh
       - name: HTMLMinifier
-        uses: emepetres/html-minifier-action
+        uses: emepetres/html-minifier-action@v1
         id: html-minifier
         with:
           rootDir: "_site"

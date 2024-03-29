@@ -1,5 +1,6 @@
 ---
 img: https://carnero.net/img/blog/tips_cicd_development.png
+pub_date: '2024-03-29T12:05:29.878698+00:00'
 ---
 # Tips for CI/CD development
 

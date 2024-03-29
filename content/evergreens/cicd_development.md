@@ -1,3 +1,6 @@
+---
+pub_date: '2024-03-29T12:05:29.884874+00:00'
+---
 # Tips for CI/CD development
 
 Text here is ignored. Use for properties, internal notes, etc.

@@ -1,6 +1,4 @@
-title: "\U0001F40F Javier Carnero"
-domain: carnero.net
-protocol: https
+title: "Evergreens"
 templates:
   default: templates/page.html
-  index: templates/index.html
+  index: templates/section_index.html

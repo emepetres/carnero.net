@@ -33,9 +33,9 @@ This is the equivalent of publishing it.
 Run the following command to build the site and test it locally:
 
 ```bash
-[only the first time] mamba env create -f scripts/blog_generator/environment.yml
-mamba activate blog_generator
-scripts/build.sh
+[only the first time] mamba env create -f /site_generator/environment.yml
+mamba activate site_generator
+scripts/bundle.sh
 ```
 
 ### 4. Commit and push

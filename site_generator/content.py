@@ -28,7 +28,7 @@ class Content:
 
         self.listable = self.file_path.name != "index.md"
 
-        with open(file_path) as f:
+        with open(file_path, encoding="utf8") as f:
             markdown = f.read()
         self.markdown = markdown
         self.properties = get_markdown_properties(markdown)
@@ -118,7 +118,7 @@ class Content:
     def write_properties(self):
         self.markdown = set_markdown_properties(self.markdown, self.properties)
 
-        with open(self.file_path, "w") as f:
+        with open(self.file_path, "w", encoding="utf8") as f:
             f.write(self.markdown)
 
     def write_to_html(
@@ -175,7 +175,7 @@ class Content:
                     """
             html = html.replace("{% list %}", summaries_html)
 
-        with open(bundle_path / self.uri, "w") as f:
+        with open(bundle_path / self.uri, "w", encoding="utf8") as f:
             f.write(html)
 
     def _is_h1(line):

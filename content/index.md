@@ -28,8 +28,9 @@ Check [my blog](/blog) [![Atom feed](/img/feed.svg "Atom feed")](/blog/atom.xml)
 
 ### Evergreens
 
-There are some notes that I try to keep updated and relevant, beyond the blog format.
+There are [some notes](/evergreens/) that I try to keep updated and relevant, beyond the blog format.
 
+* [Tips for CI/CD development](/evergreens/cicd_development.html)
 * [Old publications](/publications.html)
 
 ## Interests

@@ -103,6 +103,18 @@ blockquote {
     color: #444
 }
 
+p.note {
+    color: #adadad
+}
+
+p.note a {
+    color: rgb(160, 139, 255);
+}
+
+p.note a:visited {
+    color: rgb(160, 139, 255);
+}
+
 pre {
     overflow-x: auto;
     color: #fff;
@@ -218,12 +230,24 @@ a#feed-icon img {
         color: #ccc
     }
 
+    p.note {
+        color: #444
+    }
+
     a {
         color: #88f
     }
 
     a:visited {
         color: #aaf
+    }
+
+    p.note a {
+        color: rgb(58, 58, 109)
+    }
+
+    p.note a:visited {
+        color: rgb(58, 58, 109)
     }
 
     .response {

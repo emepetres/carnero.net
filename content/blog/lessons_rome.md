@@ -1,6 +1,7 @@
 ---
 lang: en
 img: https://carnero.net/img/blog/lessons_rome_shaking_hands.webp
+pub_date: '2024-11-17T22:18:31.193730+00:00'
 ---
 
 # Lessons from Rome on Scaling Teams

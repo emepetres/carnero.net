@@ -12,7 +12,7 @@ As I explored the fascinating history of the Roman Empire, I couldn’t help but
 
 ## Content
 
-Recently, I delved into _SPQR_ by Mary Beard, a book that sidesteps the usual gossip about emperors and daily life to scientifically explore the origins, development, and expansion of the Roman Empire. It also examines how people from different classes lived within its borders—their problems, aspirations, and solutions. While reading, I noticed a few key strategies that allowed Rome to expand and maintain its vast territories, even without the modern conveniences of telecommunication, unified calendars, or common languages. Surprisingly, these ancient methods offer a lot of insight for organizing and scaling modern software teams.
+Recently, I delved into [_SPQR_ by Mary Beard](https://www.goodreads.com/book/show/28789711-spqr), a book that sidesteps the usual gossip about emperors and daily life to scientifically explore the origins, development, and expansion of the Roman Empire. It also examines how people from different classes lived within its borders—their problems, aspirations, and solutions. While reading, I noticed a few key strategies that allowed Rome to expand and maintain its vast territories, even without the modern conveniences of telecommunication, unified calendars, or common languages. Surprisingly, these ancient methods offer a lot of insight for organizing and scaling modern software teams.
 
 ## Expansion Through Inclusion
 

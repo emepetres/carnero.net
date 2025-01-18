@@ -2,14 +2,8 @@ name: site_generator
 channels:
   - conda-forge
 dependencies:
-  - pip=24.0
   - python=3.12.1
+  - pip
   - pip:
-      - feedgen==1.0
-      - click==8.1
-      - pyyaml==6.0.1
-      - markdown==3.5
-      - pytest
-      - black
-      - flake8
-      - freezegun==1.4
+      - -r file:requirements.txt
+      - -r file:requirements-dev.txt

@@ -84,12 +84,15 @@ a:hover {
     text-decoration: underline
 }
 
+ul li {
+    list-style-type: circle;
+}
+
 dt {
     margin-top: 2em;
     font-size: 1.2em
 }
 
-li,
 dd {
     margin-bottom: 1em
 }
@@ -144,7 +147,7 @@ section {
 
 header#masthead {
     margin-bottom: 1em;
-    margin:0
+    margin: 0
 }
 
 header#masthead a {
@@ -162,16 +165,8 @@ header#masthead aside a {
     color: #20b;
 }
 
-body#home main h2 small {
+body main h2 small {
     margin-left: 2em
-}
-
-body#home main ul {
-    padding-left: 0
-}
-
-body#home main ul li {
-    list-style-type: none
 }
 
 h1 aside {
@@ -261,6 +256,10 @@ a#feed-icon img {
     h3,
     h3 a,
     header#masthead a {
+        color: #080
+    }
+
+    ul li::marker {
         color: #080
     }
 

@@ -34,11 +34,15 @@ There are [some notes](/evergreens/) that I try to keep updated and relevant, be
 
 ## Interests
 
-* Chess: I play chess almost every day, look for me at [chess.com](https://www.chess.com/member/emepetres) or [lichess](https://lichess.org/@/jcarnero).
-* Padel: I love to play padel, let's play a match if you are in Seville!
-* Sailing: I got my license during the pandemic. Since then I try to sail whenever I can to keep practicing.
-* Boulder: I used to boulder a lot before the pandemic. I hope to get back to it soon.
-* Drawing: I usually like to draw portraits, and wild nature & abandon infrastructre scenes. Despite is was first printed in 1979, I highly recommend [this book](https://www.drawright.com/) to learn how to draw (available in multiple languages).
+Chess: I play chess almost every day, look for me at [chess.com](https://www.chess.com/member/emepetres) or [lichess](https://lichess.org/@/jcarnero).
+
+Padel: I love to play padel, let's play a match if you are in Seville!
+
+Sailing: I got my license during the pandemic. Since then I try to sail whenever I can to keep practicing.
+
+Boulder: I used to boulder a lot before the pandemic. I hope to get back to it soon.
+
+Drawing: I usually like to draw portraits, and wild nature & abandon infrastructre scenes. Despite is was first printed in 1979, I highly recommend [this book](https://www.drawright.com/) to learn how to draw (available in multiple languages).
 
 <!-- ## Some things I believe
 

@@ -1,6 +1,7 @@
 ---
 lang: en
 img: https://carnero.net/img/blog/managers_understanding_our_role.png
+pub_date: '2025-01-22T17:37:46.530576+00:00'
 ---
 
 # Managers: Understanding Our Role

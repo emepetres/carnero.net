@@ -23,7 +23,7 @@ In recent years, as a manager myself, I've continued to struggle with these ques
 - Managing projects and anticipating potential issues.
 - Dealing with clients and securing new projects.
 - Encouraging learning and professional growth.
-- Hiring (or occasionally letting go of) team memers.
+- Hiring (or occasionally letting go of) team members.
 - Representing the team through talks and conferences.
 
 While these tasks are undeniably important, I always felt they answered the _how_ but not the _what_ or _why_. This lack of clarity persisted until a few months ago when a mistake I made brought things into focus.
@@ -49,7 +49,7 @@ I define _profitability_ as the ratio `value creation / effort`. Focusing on max
 
 ## A Clearer Evaluation Framework
 
-This lens simplifies the evaluation of a manager's performance. It's no longer about checking off trendy activities like team-building exercises or adopting the latest performance review techniques. Instead, the focus is on whether we're taking the necessary actions to maximize the profitability of our team's work across timeframes.
+This lens simplifies the evaluation of a manager's performance. It's no longer about checking off trendy activities like team-building exercises or adopting the latest performance review techniques. Instead, the focus is on whether we're taking the necessary actions to maximize the profitability of our team's work across time-frames.
 
 ## Misalignment and Its Consequences
 

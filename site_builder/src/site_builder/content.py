@@ -3,7 +3,7 @@ from pathlib import Path
 from markdown import markdown
 from datetime import datetime, UTC
 import dateutil.parser
-from site_generator.markdown_properties import (
+from site_builder.markdown_properties import (
     get_markdown_properties,
     set_markdown_properties,
 )
@@ -159,7 +159,8 @@ class Content:
             for section in self.sections[2:]:
                 sections_html += (
                     f"<section>\n<h2>{section['title']}</h2>\n"
-                    f"{markdown(section["content"], extensions=['attr_list', 'def_list'])}\n</section>")
+                    f"{markdown(section["content"], extensions=['attr_list', 'def_list'])}\n</section>"
+                )
         html = html.replace("{% sections %}", sections_html)
 
         # replace list of summaries

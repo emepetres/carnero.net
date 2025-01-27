@@ -1,4 +1,4 @@
-name: site_generator
+name: site_builder
 channels:
   - conda-forge
 dependencies:

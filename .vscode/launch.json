@@ -8,7 +8,7 @@
       "name": "Bundle",
       "type": "debugpy",
       "request": "launch",
-      "module": "site_generator.bundle",
+      "module": "site_builder.bundle",
       "args": ["_site", "content"]
     }
   ]

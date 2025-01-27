@@ -1,4 +1,4 @@
-from site_generator.markdown_properties import (
+from site_builder.markdown_properties import (
     get_markdown_properties,
     set_markdown_properties,
 )

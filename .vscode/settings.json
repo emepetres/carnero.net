@@ -5,6 +5,6 @@
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "python.analysis.inlayHints.pytestParameters": true,
-  "python.testing.pytestArgs": ["site_generator"],
+  "python.testing.pytestArgs": ["site_builder"],
   "liveServer.settings.root": "/_site"
 }

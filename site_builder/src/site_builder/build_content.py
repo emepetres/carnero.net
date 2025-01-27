@@ -1,10 +1,12 @@
 from pathlib import Path
 import yaml
-from site_generator.atom_feed import AtomFeed
-from site_generator.content import Content
+from site_builder.atom_feed import AtomFeed
+from site_builder.content import Content
 
 
-def build_content(bundle_path: Path, content_path: Path, folder: Path, master_config: dict) -> None:
+def build_content(
+    bundle_path: Path, content_path: Path, folder: Path, master_config: dict
+) -> None:
     """Builds html files from markdown content and writes them to disk.
 
     Args:
@@ -55,7 +57,9 @@ def build_content(bundle_path: Path, content_path: Path, folder: Path, master_co
             summaries.append(
                 {
                     "title": content.title,
-                    "summary_content": content.sections[0]["content"] if content.sections else "",
+                    "summary_content": (
+                        content.sections[0]["content"] if content.sections else ""
+                    ),
                     "pub_date": content.pub_date,
                     "uri": content.uri,
                 }

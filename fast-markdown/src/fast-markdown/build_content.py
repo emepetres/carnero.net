@@ -1,9 +1,9 @@
 from pathlib import Path
 import yaml
 
-import site_builder.settings as settings
-from site_builder.atom_feed import AtomFeed
-from site_builder.content import Content
+import fast-markdown.settings as settings
+from fast-markdown.atom_feed import AtomFeed
+from fast-markdown.content import Content
 
 
 def build_content(

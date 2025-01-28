@@ -3,8 +3,8 @@ import click
 import shutil
 import yaml
 
-import site_builder.settings as settings
-from site_builder.build_content import build_content
+import fast-markdown.settings as settings
+from fast-markdown.build_content import build_content
 
 
 @click.command()

@@ -1,8 +1,8 @@
 from pathlib import Path
 from feedgen.feed import FeedGenerator
-from site_builder.multilang import MultilangExtension, MultilangEntryExtension
-from site_builder.feedgen_patch import atom_entry_patched
-from site_builder.content import Content
+from fast-markdown.multilang import MultilangExtension, MultilangEntryExtension
+from fast-markdown.feedgen_patch import atom_entry_patched
+from fast-markdown.content import Content
 
 
 class AtomFeed:

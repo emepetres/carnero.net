@@ -33,8 +33,8 @@ This is the equivalent of publishing it.
 Run the following command to build the site and test it locally:
 
 ```bash
-[only the first time] mamba env create -f /site_builder/environment.yml
-mamba activate site_builder
+[only the first time] mamba env create -f /fast-markdown/environment.yml
+mamba activate fast-markdown
 scripts/bundle.sh
 ```
 

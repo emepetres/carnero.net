@@ -1,8 +1,8 @@
 import pytest
 from pathlib import Path
 from freezegun import freeze_time
-from site_builder.content import Content
-from site_builder.markdown_properties import get_markdown_properties
+from fast-markdown.content import Content
+from fast-markdown.markdown_properties import get_markdown_properties
 
 
 @pytest.fixture(scope="session")

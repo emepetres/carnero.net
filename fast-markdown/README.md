@@ -14,8 +14,6 @@ TODO e.g. devcontainer
 
 ### Testing
 
-Use devops CI for testing before pushing.
-
 For local testing, use your IDE integration with pytest, or just run run `pytest tests` in the root directory.
 If pylance doesn't recognize some imports, you may need to rerun `pip install -e .`
 

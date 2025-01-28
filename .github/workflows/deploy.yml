@@ -24,8 +24,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r site_builder/requirements.txt
-      - run: site_builder/scripts/bundle.sh
+      - run: pip install -r fast-markdown/requirements.txt
+      - run: fast-markdown/scripts/bundle.sh
       - name: HTMLMinifier
         uses: emepetres/html-minifier-action@v1
         id: html-minifier

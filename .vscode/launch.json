@@ -8,7 +8,7 @@
       "name": "Bundle",
       "type": "debugpy",
       "request": "launch",
-      "module": "site_builder.bundle",
+      "module": "fast-markdown.bundle",
       "args": ["_site", "content"]
     }
   ]

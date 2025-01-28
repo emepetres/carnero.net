@@ -3,7 +3,7 @@ from pathlib import Path
 from markdown import markdown
 from datetime import datetime, UTC
 import dateutil.parser
-from site_builder.markdown_properties import (
+from fast-markdown.markdown_properties import (
     get_markdown_properties,
     set_markdown_properties,
 )

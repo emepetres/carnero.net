@@ -5,6 +5,6 @@
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "python.analysis.inlayHints.pytestParameters": true,
-  "python.testing.pytestArgs": ["site_builder"],
+  "python.testing.pytestArgs": ["fast-markdown"],
   "liveServer.settings.root": "/_site"
 }

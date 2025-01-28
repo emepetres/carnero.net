@@ -1,17 +1,19 @@
 from pathlib import Path
 import yaml
+
+import site_builder.settings as settings
 from site_builder.atom_feed import AtomFeed
 from site_builder.content import Content
 
 
 def build_content(
-    bundle_path: Path, content_path: Path, folder: Path, master_config: dict
+    bundle_path: Path, data_path: Path, folder: Path, master_config: dict
 ) -> None:
     """Builds html files from markdown content and writes them to disk.
 
     Args:
         bundle_path (Path): base path to write html files
-        content_path (Path): base path to read markdown files
+        data_path (Path): base path to read markdown files
         master_config (dict): master configuration
     """
     # create bundle path if it doesn't exist
@@ -20,7 +22,8 @@ def build_content(
     # get config
     website_tile = master_config["title"] if "title" in master_config else None
     base_url = f"{master_config["protocol"]}://{master_config["domain"]}"
-    config_path = content_path / folder / "config.yaml"
+    content_path = data_path / settings.CONTENT_FOLDER
+    config_path = content_path / folder / settings.CONFIG_FILE
     if config_path.exists():
         config = yaml.safe_load(open(config_path))
     else:
@@ -30,6 +33,7 @@ def build_content(
     Content.uri = str(folder)
     Content.website_title = website_tile
     Content.master_title = config["title"] if "title" in config else None
+    Content.data_path = data_path
     Content.templates = config["templates"]
 
     is_blog = "feed_file" in config

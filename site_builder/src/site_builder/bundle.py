@@ -2,6 +2,8 @@ from pathlib import Path
 import click
 import shutil
 import yaml
+
+import site_builder.settings as settings
 from site_builder.build_content import build_content
 
 
@@ -17,11 +19,11 @@ def bundle_site(bundle_path: Path, data_path: Path):
     data_path = Path(data_path)
 
     # get master config
-    config_path = data_path / "config.yaml"
+    config_path = data_path / settings.CONFIG_FILE
     master_config = yaml.safe_load(open(config_path))
 
     # get list of folders under content path
-    content_path = data_path / "content"
+    content_path = data_path / settings.CONTENT_FOLDER
     content_folders = [
         f.relative_to(content_path) for f in content_path.iterdir() if f.is_dir()
     ]
@@ -29,10 +31,10 @@ def bundle_site(bundle_path: Path, data_path: Path):
 
     # build html files
     for _folder in content_folders:
-        build_content(bundle_path, content_path, _folder, master_config)
+        build_content(bundle_path, data_path, _folder, master_config)
 
     # add static files
-    static_path = data_path / "static"
+    static_path = data_path / settings.STATIC_FOLDER
     shutil.copytree(str(static_path), str(bundle_path), dirs_exist_ok=True)
 
 

@@ -16,6 +16,15 @@ def config():
     return config
 
 
+@pytest.fixture(autouse=True)
+def clean_content(config) -> None:
+    Content.uri = "/"
+    Content.website_title = None
+    Content.master_title = None
+    Content.data_path = Path(".")
+    Content.templates = config["templates"]
+
+
 @pytest.fixture()
 def markdown_file(tmp_path_factory: pytest.TempPathFactory):
     markdown_content = """
@@ -206,44 +215,37 @@ def markdown_empty(tmp_path_factory: pytest.TempPathFactory):
     return fn
 
 
-def test_read_title(config: dict[str, dict[str, str]], markdown_file: Path):
-    Content.templates = config["templates"]
+def test_read_title(markdown_file: Path):
     content = Content.read_from_markdown(markdown_file)
     assert content.title == "Title"
 
 
-def test_read_summary(config: dict[str, dict[str, str]], markdown_file: Path):
-    Content.templates = config["templates"]
+def test_read_summary(markdown_file: Path):
     content = Content.read_from_markdown(markdown_file)
     assert content.sections[0]["title"] == "Summary"
     assert content.sections[0]["content"] == "Summary content"
 
 
-def test_read_sections(config: dict[str, dict[str, str]], markdown_file: Path):
-    Content.templates = config["templates"]
+def test_read_sections(markdown_file: Path):
     content = Content.read_from_markdown(markdown_file)
     assert len(content.sections) == 4
 
 
 @freeze_time("2024-02-21")
-def test_update_pub_date(config: dict[str, dict[str, str]], markdown_file: Path):
-    Content.templates = config["templates"]
+def test_update_pub_date(markdown_file: Path):
     content = Content.read_from_markdown(markdown_file)
     assert content.pub_date == "2024-02-21"
 
 
 @freeze_time("2024-02-21")
-def test_keep_pub_date(
-    config: dict[str, dict[str, str]], published_markdown_file: Path
+def test_keep_pub_date(published_markdown_file: Path
 ):
-    Content.templates = config["templates"]
     content = Content.read_from_markdown(published_markdown_file)
     assert content.pub_date == "2024-02-14"
 
 
 @freeze_time("2024-02-21")
-def test_update_properties(config: dict[str, dict[str, str]], markdown_file: Path):
-    Content.templates = config["templates"]
+def test_update_properties(markdown_file: Path):
     content = Content.read_from_markdown(markdown_file)
     content.write_properties()
     with open(markdown_file) as f:
@@ -256,10 +258,8 @@ def test_update_properties(config: dict[str, dict[str, str]], markdown_file: Pat
 
 
 @freeze_time("2024-02-21")
-def test_write_html(
-    config: dict[str, dict[str, str]], markdown_file: Path, template: Path
+def test_write_html(markdown_file: Path, template: Path
 ):
-    Content.templates = config["templates"]
     content = Content.read_from_markdown(markdown_file)
     content.template = template
     content.write_to_html(markdown_file.parent)
@@ -291,34 +291,26 @@ def test_write_html(
     )
 
 
-def test_support_for_no_properties(
-    config: dict[str, dict[str, str]], markdown_without_properties: Path
+def test_support_for_no_properties(markdown_without_properties: Path
 ):
-    Content.templates = config["templates"]
     content = Content.read_from_markdown(markdown_without_properties)
     assert len(content.sections) == 4
 
 
-def test_detect_wrong_properties_position(
-    config: dict[str, dict[str, str]], markdown_wrong_properties: Path
+def test_detect_wrong_properties_position(markdown_wrong_properties: Path
 ):
-    Content.templates = config["templates"]
     with pytest.raises(ValueError):
         Content.read_from_markdown(markdown_wrong_properties)
 
 
-def test_support_files_only_title(
-    config: dict[str, dict[str, str]], markdown_no_content: Path
+def test_support_files_only_title(markdown_no_content: Path
 ):
-    Content.templates = config["templates"]
     content = Content.read_from_markdown(markdown_no_content)
     assert content.title == "Title"
     assert content.sections == []
 
 
-def test_raise_with_empty_files(
-    config: dict[str, dict[str, str]], markdown_empty: Path
+def test_raise_with_empty_files(markdown_empty: Path
 ):
-    Content.templates = config["templates"]
     with pytest.raises(ValueError):
         Content.read_from_markdown(markdown_empty)

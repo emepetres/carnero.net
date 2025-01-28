@@ -14,6 +14,7 @@ class Content:
     uri: str = "/"
     website_title: str | None = None
     master_title: str | None = None
+    data_path: Path = Path(".")
     templates: dict = {}
 
     def __init__(self, file_path: Path):
@@ -38,9 +39,10 @@ class Content:
 
         # set template
         if "template" in content.properties:
-            content.template = Path(Content.templates[content.properties["template"]])
+            content.template = content.data_path / \
+                Content.templates[content.properties["template"]]
         else:
-            content.template = Path(Content.templates["default"])
+            content.template = content.data_path / Content.templates["default"]
 
         # set uri
         if Content.uri == "" or Content.uri[-1] != "/":
@@ -83,7 +85,8 @@ class Content:
             # check if properties are found after content
             if no_properties and line.strip() == "---":
                 raise ValueError(
-                    f"Properties found after content in file {content.file_path}"
+                    f"Properties found after content in file {
+                        content.file_path}"
                 )
 
             # ignore properties if present
@@ -141,8 +144,10 @@ class Content:
 
         # replace summary
         if self.sections:
-            html = html.replace("{% summary_title %}", self.sections[0]["title"])
-            html = html.replace("{% summary_content %}", self.sections[0]["content"])
+            html = html.replace("{% summary_title %}",
+                                self.sections[0]["title"])
+            html = html.replace("{% summary_content %}",
+                                self.sections[0]["content"])
         else:
             html = html.replace("{% summary_title %}", "")
             html = html.replace("{% summary_content %}", "")
@@ -159,7 +164,8 @@ class Content:
             for section in self.sections[2:]:
                 sections_html += (
                     f"<section>\n<h2>{section['title']}</h2>\n"
-                    f"{markdown(section["content"], extensions=['attr_list', 'def_list'])}\n</section>"
+                    f"{markdown(section["content"], extensions=[
+                                'attr_list', 'def_list'])}\n</section>"
                 )
         html = html.replace("{% sections %}", sections_html)
 
